@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Player Salary Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <img src="your-logo.png" alt="Logo">
+        </div>
+        <h1>NBA Player Salary Comparison</h1>
+        <div class="select-container">
+            <label for="player-select">Select an NBA Player:</label>
+            <select id="player-select">
+                <!-- Options will be dynamically populated -->
+            </select>
+            <button onclick="showPlayerSalary()">Go</button> <!-- New button -->
+        </div>
+        <div class="table-container">
+            <table id="salary-table">
+                <thead>
+                    <tr>
+                        <th>Player Name</th>
+                        <th>Original Salary</th>
+                        <th>Random Forest Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be dynamically populated -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
