@@ -5,6 +5,11 @@ async function fetchCSVFile() {
     return data;
 }
 
+// Function to format numbers with commas
+function formatNumberWithCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 // Function to parse CSV data and populate dropdown menu
 async function populateDropdownMenu() {
     const data = await fetchCSVFile();
@@ -40,8 +45,8 @@ async function showPlayerSalary() {
     for (let i = 1; i < rows.length; i++) {
         const columns = rows[i].split(',');
         if (columns[playerIndex] === playerName) {
-            const originalSalary = columns[1];
-            const randomForestSalary = columns[4];
+            const originalSalary = formatNumberWithCommas(columns[1]);
+            const randomForestSalary = formatNumberWithCommas(columns[4]);
 
             // Display salary table for selected player
             var salaryHTML = `<h2>${playerName}'s Salaries</h2>`;
